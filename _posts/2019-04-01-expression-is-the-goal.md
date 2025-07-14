@@ -6,6 +6,8 @@ categories: [inspiration]
 layout: post
 ---
 
+![GDC Talk Banner]({{ "/assets/images/expression-gdc-banner.png" | relative_url }})
+
 Saw this awesome slide from a GDC talk and had to share.
 
 Here's the GDC talk:
