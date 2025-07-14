@@ -8,12 +8,7 @@ permalink: /news/
   <h2>Game Development News & Updates</h2>
   <p>Stay up to date with the latest news about Crimson Crisis and other projects.</p>
   
-  {% assign news_posts = site.posts | where_exp: "post", "post.categories contains 'news'" %}
-  {% if news_posts.size == 0 %}
-    {% assign news_posts = site.posts %}
-  {% endif %}
-  
-  {% for post in news_posts %}
+  {% for post in site.posts %}
     <article class="news-archive-item">
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
