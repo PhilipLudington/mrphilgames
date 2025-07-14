@@ -357,12 +357,29 @@ a:hover {
   }
 
   .steam-widget iframe {
+    width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 160px;
+  }
+  
+  .steam-widget {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 
   .news-grid, .blog-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .steam-widget iframe {
+    height: 140px;
+  }
+  
+  .steam-widget-section {
+    padding: 1.5rem 0;
   }
 }
 
