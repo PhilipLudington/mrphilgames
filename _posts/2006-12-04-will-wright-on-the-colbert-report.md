@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Will Wright on the Colbert Report"
 date: 2006-12-04
 categories: news

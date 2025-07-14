@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "SilverLight DevCamp Nugget #4"
 date: 2007-11-16
 categories: news technical

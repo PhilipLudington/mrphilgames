@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ludum Dare 21: Escape with Pac-Man Inspiration"
 date: 2011-08-19 00:00:00 -0000
 categories: [gamejams, devlog]

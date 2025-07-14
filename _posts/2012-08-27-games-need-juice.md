@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Games Need Juice"
 date: 2012-08-27
 author: MrPhil

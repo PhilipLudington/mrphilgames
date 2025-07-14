@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "ESA: Sales, demographics and usage data"
 date: 2006-01-31
 categories: news

@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Ludum Dare 24: What The Flock"
+layout: custom-post
+title: "Ludum Dare 24 Announcement"
 date: 2012-08-24 00:00:00 -0000
 categories: [gamejams, devlog]
 tags: [ludum-dare, evolution, flashdevelop, flashpunk, gamedev]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "T2D release Alpha 4!"
 date: 2006-02-02
 categories: news

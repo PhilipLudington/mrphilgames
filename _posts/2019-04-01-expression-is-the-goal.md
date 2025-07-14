@@ -3,7 +3,7 @@ title: "Expression IS the goal"
 date: 2019-04-01
 author: MrPhil
 categories: [inspiration]
-layout: post
+layout: custom-post
 ---
 
 ![GDC Talk Banner]({{ "/assets/images/expression-gdc-banner.png" | relative_url }})

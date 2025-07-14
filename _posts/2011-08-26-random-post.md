@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Random Post"
 author: MrPhil
 date: 2011-08-26

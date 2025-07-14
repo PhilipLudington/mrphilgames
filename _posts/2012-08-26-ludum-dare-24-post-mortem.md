@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Ludum Dare 24 - What The Flock"
+layout: custom-post
+title: "Ludum Dare 24 - Post Mortem"
 date: 2012-08-26
 author: MrPhil
 categories: [gamejams, ludum-dare]

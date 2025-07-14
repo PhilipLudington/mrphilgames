@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Mr. Phil Games Update"
 date: 2006-09-18
 categories: news

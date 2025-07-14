@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Tom Miller's render loop, a revision"
 date: 2006-10-08
 categories: news

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "325,902 Xbox 360 sold in November"
 date: 2005-12-14
 categories: news

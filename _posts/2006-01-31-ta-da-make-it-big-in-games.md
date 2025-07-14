@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ta Da! Make It Big In Games"
 date: 2006-01-31
 categories: news

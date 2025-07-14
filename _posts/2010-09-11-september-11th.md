@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "September 11th"
 date: 2010-09-11
 categories: news

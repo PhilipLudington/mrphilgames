@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Taperwire"
 date: 2005-12-14
 categories: news

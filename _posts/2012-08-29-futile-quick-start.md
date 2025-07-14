@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Futile Quick Start"
 date: 2012-08-29
 author: MrPhil

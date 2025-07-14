@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "New Project: Iron Roads"
 author: MrPhil
 date: 2009-01-12

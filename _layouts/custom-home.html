@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+  <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title | escape }}" />
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+      <div class="trigger">
+        <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
+        <a class="page-link" href="{{ "/news/" | relative_url }}">News</a>
+        <a class="page-link" href="https://blog.mrphilgames.com" target="_blank">Blog</a>
+        <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
+        <a class="page-link" href="{{ "/contact/" | relative_url }}">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+  <div class="wrapper">
+    <div class="home-container">
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <img src="{{ '/assets/images/mrphilgames-logo.png' | relative_url }}" alt="{{ site.title }}" class="site-logo-image">
+  </div>
+
+  <!-- Navigation (will be handled by default layout header) -->
+
+  <!-- Steam Wishlist Widget -->
+  <div class="steam-widget-section">
+    <h2>Wishlist Crimson Crisis on Steam!</h2>
+    <div class="steam-widget">
+      <iframe src="https://store.steampowered.com/widget/586290/" frameborder="0" width="646" height="190"></iframe>
+    </div>
+  </div>
+
+  <!-- News Feed Section -->
+  <div class="news-section">
+    <h2>Latest News</h2>
+    <div class="news-grid">
+      {% for post in site.posts limit:3 %}
+        <article class="news-item">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Blog Feed Section -->
+  <div class="blog-section">
+    <h2>Recent Blog Posts</h2>
+    <div class="blog-grid" id="external-blog-posts">
+      <div class="loading">Loading blog posts...</div>
+    </div>
+    <p class="more-posts"><a href="https://blog.mrphilgames.com" target="_blank">View all posts →</a></p>
+  </div>
+
+  <script>
+    // Fetch and display external blog posts
+    (function() {
+      const feedUrl = 'https://blog.mrphilgames.com/posts.atom';
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(feedUrl);
+      const blogGrid = document.getElementById('external-blog-posts');
+      
+      fetch(proxyUrl)
+        .then(response => response.text())
+        .then(str => {
+          // Parse the Atom feed
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(str, 'text/xml');
+          const entries = doc.querySelectorAll('entry');
+          
+          // Clear loading message
+          blogGrid.innerHTML = '';
+          
+          // Display up to 6 posts
+          const maxPosts = Math.min(6, entries.length);
+          for (let i = 0; i < maxPosts; i++) {
+            const entry = entries[i];
+            const title = entry.querySelector('title').textContent;
+            const link = entry.querySelector('link[rel="alternate"]').getAttribute('href');
+            const published = entry.querySelector('published').textContent;
+            const date = new Date(published);
+            const formattedDate = date.toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            });
+            
+            const article = document.createElement('article');
+            article.className = 'blog-item';
+            article.innerHTML = `
+              <h3><a href="${link}" target="_blank">${title}</a></h3>
+              <p class="post-meta">${formattedDate}</p>
+            `;
+            
+            blogGrid.appendChild(article);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching blog feed:', error);
+          blogGrid.innerHTML = '<p>Unable to load blog posts. <a href="https://blog.mrphilgames.com" target="_blank">Visit the blog directly →</a></p>';
+        });
+    })();
+  </script>
+
+  <!-- Footer -->
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">{{ site.title | escape }}</li>
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            <a href="https://github.com/{{ site.github_username }}">
+              <svg class="social-icon" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span class="username">{{ site.github_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>
+            <a href="https://www.twitter.com/{{ site.twitter_username }}">
+              <svg class="social-icon" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg>
+              <span class="username">{{ site.twitter_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

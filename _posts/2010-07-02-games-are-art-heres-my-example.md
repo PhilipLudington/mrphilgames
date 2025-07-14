@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Games are Art, here's my example"
 date: 2010-07-02
 categories: news

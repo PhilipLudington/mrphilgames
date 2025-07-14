@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Why I'm back and what I've learned"
 date: 2005-02-01
 categories: news

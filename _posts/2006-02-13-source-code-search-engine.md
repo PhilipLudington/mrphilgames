@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Source Code Search Engine"
 date: 2006-02-13
 categories: news

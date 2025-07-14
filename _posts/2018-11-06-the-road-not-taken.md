@@ -3,7 +3,7 @@ title: "The Road Not Taken"
 date: 2018-11-06
 author: MrPhil
 categories: [inspiration]
-layout: post
+layout: custom-post
 ---
 
 ![Mountain Interval]({{ "/assets/images/mountain-interval.jpg" | relative_url }})

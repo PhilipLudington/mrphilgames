@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ludum Dare 21 - Update 2"
 author: MrPhil
 date: 2011-08-26

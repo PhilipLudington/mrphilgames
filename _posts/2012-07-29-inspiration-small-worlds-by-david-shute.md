@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Inspiration: Small Worlds by David Shute"
 date: 2012-07-29
 author: MrPhil

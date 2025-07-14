@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "My excuse for procrastinating Christmas shopping this weekend"
 date: 2005-12-09
 categories: news

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Devil is in the details, right?"
 date: 2006-02-02
 categories: news

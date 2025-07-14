@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ludum Dare 41: First Time with Godot"
 date: 2018-04-20 00:00:00 -0000
 categories: [gamejams, devlog]

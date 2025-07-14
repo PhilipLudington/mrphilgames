@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ludum Dare 23: Seeds of Destruction"
 date: 2012-04-22 00:00:00 -0000
 categories: [gamejams, devlog]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "A new direction"
 date: 2005-02-08
 categories: news

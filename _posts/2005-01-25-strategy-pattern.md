@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Strategy Pattern"
 date: 2005-01-25
 categories: programming

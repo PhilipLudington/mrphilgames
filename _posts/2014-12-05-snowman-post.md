@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "☃ Snowman post"
 date: 2014-12-05
 author: MrPhil

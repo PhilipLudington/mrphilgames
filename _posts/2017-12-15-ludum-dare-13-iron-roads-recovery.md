@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Ludum Dare 13: Iron Roads - Recovery Project"
 date: 2017-12-15 00:00:00 -0000
 categories: [gamejams, devlog, archive]

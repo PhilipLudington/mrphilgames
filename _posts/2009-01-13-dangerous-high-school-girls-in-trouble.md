@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Dangerous High School Girls in Trouble!"
 author: MrPhil
 date: 2009-01-13

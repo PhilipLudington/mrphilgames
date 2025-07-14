@@ -18,16 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Mr. Phil Games
+email: mrphil@mrphilgames.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Game development blog and portfolio by Philip Ludington. Follow the development
+  of Stellar Throne, Crimson Crisis and other indie game projects.
 baseurl: "/mrphilgames" # the subpath of your site, e.g. /blog
 url: "https://philipludington.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: mrphilgames
+github_username:  PhilipLudington
 
 # Build settings
 theme: minima
@@ -54,4 +53,17 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 permalink: /news/articles/:title/
+
+# Set default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "custom-post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "custom-page"
 

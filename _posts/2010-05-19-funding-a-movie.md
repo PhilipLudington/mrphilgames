@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Funding a Movie"
 date: 2010-05-19
 categories: news

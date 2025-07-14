@@ -3,7 +3,7 @@ title: "Game design through animation?"
 date: 2020-02-13
 author: MrPhil
 categories: [Design]
-layout: post
+layout: custom-post
 ---
 
 ![Game Design Animation Banner]({{ "/assets/images/game-design-animation-banner.png" | relative_url }})

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Art Requires Influence"
 author: MrPhil
 date: 2011-08-26

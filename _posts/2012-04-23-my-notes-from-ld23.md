@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "My Notes from LD23"
 author: MrPhil
 date: 2012-04-23

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "BANNED! Dangerous High School Girls in Trouble!"
 date: 2009-02-28
 categories: news

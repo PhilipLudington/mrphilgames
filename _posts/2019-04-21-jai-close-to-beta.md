@@ -3,7 +3,7 @@ title: "Jai close to Beta!"
 date: 2019-04-21
 author: MrPhil
 categories: [News]
-layout: post
+layout: custom-post
 ---
 
 ![Jai Beta]({{ "/assets/images/jai-beta.png" | relative_url }})

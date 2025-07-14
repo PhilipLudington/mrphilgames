@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: custom-post
 title: "Day of Infamy"
 date: 2006-12-06
 categories: news
