@@ -23,8 +23,8 @@ email: mrphil@mrphilgames.com
 description: >- # this means to ignore newlines until "baseurl:"
   Game development blog and portfolio by Philip Ludington. Follow the development
   of Stellar Throne, Crimson Crisis and other indie game projects.
-baseurl: "/mrphilgames" # the subpath of your site, e.g. /blog
-url: "https://philipludington.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.mrphilgames.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mrphilgames
 github_username:  PhilipLudington
 
