@@ -153,15 +153,15 @@ a:hover {
 .steam-widget {
   display: inline-block;
   margin-top: 1rem;
-  width: 100%;
-  max-width: 646px;
+  width: 646px;
+  max-width: 100%;
   overflow: hidden;
 }
 
 .steam-widget iframe {
-  width: 100%;
+  width: 646px;
   height: 190px;
-  max-width: 646px;
+  max-width: 100%;
   border: none;
 }
 
