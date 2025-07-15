@@ -263,6 +263,12 @@ a:hover {
   color: var(--light-gray);
 }
 
+.copyright {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
 .contact-list,
 .social-media-list {
   list-style: none;
