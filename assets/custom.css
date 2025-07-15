@@ -373,19 +373,17 @@ a:hover {
   }
 
   .steam-widget {
-    width: calc(100% - 20px);
+    width: 100%;
     margin: 0 auto;
-    padding: 0;
-    max-width: none;
+    padding: 0 10px;
     overflow: hidden;
+    transform: scale(0.85);
+    transform-origin: center;
   }
 
   .steam-widget iframe {
-    width: 100%;
-    height: 160px;
-    max-width: none;
-    transform: scale(1);
-    transform-origin: top left;
+    width: 646px;
+    height: 190px;
   }
 
   .news-grid, .blog-grid {
@@ -395,11 +393,8 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .steam-widget {
-    width: calc(100% - 10px);
-  }
-
-  .steam-widget iframe {
-    height: 130px;
+    transform: scale(0.7);
+    padding: 0 5px;
   }
   
   .steam-widget-section {
