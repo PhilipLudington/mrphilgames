@@ -153,6 +153,16 @@ a:hover {
 .steam-widget {
   display: inline-block;
   margin-top: 1rem;
+  width: 100%;
+  max-width: 646px;
+  overflow: hidden;
+}
+
+.steam-widget iframe {
+  width: 100%;
+  height: 190px;
+  max-width: 646px;
+  border: none;
 }
 
 .news-section, .blog-section {
@@ -362,16 +372,20 @@ a:hover {
     max-width: 250px;
   }
 
+  .steam-widget {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 0;
+    max-width: none;
+    overflow: hidden;
+  }
+
   .steam-widget iframe {
     width: 100%;
-    max-width: 100%;
     height: 160px;
-  }
-  
-  .steam-widget {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
+    max-width: none;
+    transform: scale(1);
+    transform-origin: top left;
   }
 
   .news-grid, .blog-grid {
@@ -380,12 +394,17 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .steam-widget {
+    width: calc(100% - 10px);
+  }
+
   .steam-widget iframe {
-    height: 140px;
+    height: 130px;
   }
   
   .steam-widget-section {
     padding: 1.5rem 0;
+    margin: 0 5px 2rem 5px;
   }
 }
 
