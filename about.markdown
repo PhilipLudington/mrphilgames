@@ -11,7 +11,7 @@ permalink: /about/
     <img src="{{ '/assets/images/about-profile.png' | relative_url }}" alt="Philip Ludington / MrPhil">
   </div>
   <div class="about-text">
-    <p>My name is Philip Ludington, aka MrPhil, and I'm a Game Director maker of game shaped things in Austin, Texas.</p>
+    <p>I'm a game director in Austin, TX building Stellar Throne — a sci-fi 4X with rich exploration, competent AI opponents, and AI-assisted development. Weekly updates on solo dev, agentic coding, and building ambitious games with modern tools.</p>
   </div>
 </div>
 
