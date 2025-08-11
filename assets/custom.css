@@ -174,11 +174,12 @@ a:hover {
   width: 100%;
   height: auto;
   filter: brightness(0) invert(1);
+  flex-shrink: 0;
 }
 
 .patreon-text {
-  flex: 1;
-  max-width: 600px;
+  flex: 0 1 auto;
+  text-align: center;
 }
 
 .patreon-text h2 {
