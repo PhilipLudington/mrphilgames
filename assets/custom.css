@@ -136,6 +136,60 @@ a:hover {
   margin: 0 auto;
 }
 
+.patreon-section {
+  background: linear-gradient(135deg, #FF424D 0%, #FF6B74 100%);
+  padding: 3rem 0;
+  margin: 0 0 2rem 0;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.patreon-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 66, 77, 0.3);
+}
+
+.patreon-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.patreon-link:hover {
+  text-decoration: none;
+}
+
+.patreon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.patreon-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.patreon-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.patreon-text h2 {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  line-height: 1.4;
+}
+
 .steam-widget-section {
   text-align: center;
   padding: 2rem 0;
@@ -358,6 +412,20 @@ a:hover {
     padding: 0 15px;
   }
 
+  .patreon-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .patreon-logo {
+    max-width: 250px;
+  }
+
+  .patreon-text h2 {
+    font-size: 1.5rem;
+  }
+
   .steam-widget-section {
     margin: 0 0 2rem 0;
   }
@@ -370,6 +438,18 @@ a:hover {
 
   .site-logo-image {
     max-width: 250px;
+  }
+
+  .patreon-logo {
+    max-width: 200px;
+  }
+
+  .patreon-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .patreon-section {
+    padding: 2rem 0;
   }
 
   .steam-widget {
