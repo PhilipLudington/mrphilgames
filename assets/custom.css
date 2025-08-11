@@ -163,14 +163,14 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  max-width: 1000px;
+  gap: 2rem;
+  max-width: fit-content;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .patreon-logo {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
   height: auto;
   filter: brightness(0) invert(1);
@@ -178,8 +178,8 @@ a:hover {
 }
 
 .patreon-text {
-  flex: 0 1 auto;
-  text-align: center;
+  flex: 0 0 auto;
+  text-align: left;
 }
 
 .patreon-text h2 {
