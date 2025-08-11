@@ -138,10 +138,11 @@ a:hover {
 
 .patreon-section {
   background: linear-gradient(135deg, #FF424D 0%, #FF6B74 100%);
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   margin: 0 0 2rem 0;
   color: var(--white);
   transition: all 0.3s ease;
+  overflow: visible;
 }
 
 .patreon-section:hover {
@@ -165,7 +166,8 @@ a:hover {
   justify-content: center;
   gap: 2rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0;
+  max-width: 900px;
 }
 
 .patreon-logo {
@@ -173,6 +175,7 @@ a:hover {
   height: auto;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
+  display: block;
 }
 
 .patreon-text {
