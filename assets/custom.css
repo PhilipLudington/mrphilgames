@@ -164,9 +164,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: fit-content;
+  width: fit-content;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
 .patreon-logo {
