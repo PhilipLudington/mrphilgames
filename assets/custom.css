@@ -164,18 +164,21 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 2rem;
   max-width: 900px;
+  box-sizing: border-box;
 }
 
 .patreon-logo {
-  width: 250px;
+  width: auto;
+  max-width: 300px;
   height: auto;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
   display: block;
+  margin-right: 1rem;
 }
 
 .patreon-text {
