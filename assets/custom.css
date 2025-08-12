@@ -118,7 +118,6 @@ a:hover {
 .logo-section {
   text-align: center;
   padding: 3rem 0;
-  border-bottom: 3px solid var(--primary-green);
   margin-bottom: 0;
 }
 
@@ -162,13 +161,15 @@ a:hover {
 
 .patreon-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 900px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .patreon-logo {
@@ -176,14 +177,11 @@ a:hover {
   max-width: 300px;
   height: auto;
   filter: brightness(0) invert(1);
-  flex-shrink: 0;
   display: block;
-  margin-right: 1rem;
 }
 
 .patreon-text {
-  flex: 0 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .patreon-text h2 {
@@ -415,12 +413,6 @@ a:hover {
 
   .wrapper {
     padding: 0 15px;
-  }
-
-  .patreon-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
   }
 
   .patreon-logo {
