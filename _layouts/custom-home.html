@@ -32,7 +32,6 @@
         <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
         <a class="page-link" href="{{ "/news/" | relative_url }}">News</a>
         <a class="page-link" href="https://blog.mrphilgames.com" target="_blank">Blog</a>
-        <a class="page-link" href="https://www.patreon.com/MrPhil" target="_blank">Patreon</a>
         <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
         <a class="page-link" href="{{ "/contact/" | relative_url }}">Contact</a>
       </div>
@@ -50,23 +49,21 @@
 
   <!-- Navigation (will be handled by default layout header) -->
 
-  <!-- Patreon Section -->
-  <div class="patreon-section">
-    <a href="https://www.patreon.com/MrPhil" target="_blank" class="patreon-link">
-      <div class="patreon-content">
-        <img src="{{ '/assets/images/PATREON_Lockup_Horizontal_BLACK_RGB.png' | relative_url }}" alt="Patreon" class="patreon-logo">
-        <div class="patreon-text">
-          <h2>Join my Patreon and get behind the scenes daily devlog posts</h2>
-        </div>
-      </div>
-    </a>
-  </div>
-
   <!-- Steam Wishlist Widget -->
   <div class="steam-widget-section">
     <h2>Wishlist Crimson Crisis on Steam!</h2>
     <div class="steam-widget">
       <iframe src="https://store.steampowered.com/widget/586290/" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- YouTube Latest Video Section -->
+  <div class="youtube-widget-section">
+    <h2>Latest YouTube Video</h2>
+    <div class="youtube-widget">
+      <div class="youtube-embed-container" id="youtube-embed-container">
+        <div class="loading">Loading latest video...</div>
+      </div>
     </div>
   </div>
 
@@ -141,6 +138,49 @@
         .catch(error => {
           console.error('Error fetching blog feed:', error);
           blogGrid.innerHTML = '<p>Unable to load blog posts. <a href="https://blog.mrphilgames.com" target="_blank">Visit the blog directly →</a></p>';
+        });
+    })();
+  </script>
+
+  <script>
+    // Fetch and display latest YouTube video
+    (function() {
+      // You can find your channel ID by going to youtube.com/account_advanced
+      // For custom URLs like /c/MrPhilGames, we need to use the channel handle or ID
+      const channelHandle = 'MrPhilGames';
+      const youtubeContainer = document.getElementById('youtube-embed-container');
+
+      // Using YouTube RSS feed via rss2json proxy
+      const rssUrl = 'https://www.youtube.com/feeds/videos.xml?user=' + channelHandle;
+      const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          if (data.items && data.items.length > 0) {
+            // Extract video ID from the first item
+            const latestVideo = data.items[0];
+            const videoId = latestVideo.link.split('v=')[1];
+
+            // Create iframe element
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+            iframe.width = '646';
+            iframe.height = '364';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+
+            // Clear loading message and add iframe
+            youtubeContainer.innerHTML = '';
+            youtubeContainer.appendChild(iframe);
+          } else {
+            throw new Error('No videos found');
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching YouTube video:', error);
+          youtubeContainer.innerHTML = '<p>Unable to load latest video. <a href="https://www.youtube.com/c/MrPhilGames" target="_blank">Visit my YouTube channel →</a></p>';
         });
     })();
   </script>

@@ -135,64 +135,6 @@ a:hover {
   margin: 0 auto;
 }
 
-.patreon-section {
-  background: linear-gradient(135deg, #FF424D 0%, #FF6B74 100%);
-  padding: 3rem 2rem;
-  margin: 0 0 2rem 0;
-  color: var(--white);
-  transition: all 0.3s ease;
-  overflow: visible;
-}
-
-.patreon-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 66, 77, 0.3);
-}
-
-.patreon-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.patreon-link:hover {
-  text-decoration: none;
-}
-
-.patreon-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 900px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.patreon-logo {
-  width: auto;
-  max-width: 300px;
-  height: auto;
-  filter: brightness(0) invert(1);
-  display: block;
-}
-
-.patreon-text {
-  text-align: center;
-}
-
-.patreon-text h2 {
-  color: var(--white);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  line-height: 1.4;
-}
-
 .steam-widget-section {
   text-align: center;
   padding: 2rem 0;
@@ -220,6 +162,62 @@ a:hover {
   height: 190px;
   max-width: 100%;
   border: none;
+}
+
+.youtube-widget-section {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, #F55A4E 100%);
+  margin: 0 0 2rem 0;
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.youtube-widget-section h2 {
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.youtube-widget {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 646px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.youtube-embed-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 364px;
+}
+
+.youtube-embed-container iframe {
+  width: 646px;
+  height: 364px;
+  max-width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
+.youtube-embed-container .loading {
+  color: var(--white);
+}
+
+.youtube-embed-container p {
+  color: var(--white);
+}
+
+.youtube-embed-container a {
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.youtube-embed-container a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .news-section, .blog-section {
@@ -415,15 +413,11 @@ a:hover {
     padding: 0 15px;
   }
 
-  .patreon-logo {
-    max-width: 250px;
-  }
-
-  .patreon-text h2 {
-    font-size: 1.5rem;
-  }
-
   .steam-widget-section {
+    margin: 0 0 2rem 0;
+  }
+
+  .youtube-widget-section {
     margin: 0 0 2rem 0;
   }
 }
@@ -435,18 +429,6 @@ a:hover {
 
   .site-logo-image {
     max-width: 250px;
-  }
-
-  .patreon-logo {
-    max-width: 200px;
-  }
-
-  .patreon-text h2 {
-    font-size: 1.25rem;
-  }
-
-  .patreon-section {
-    padding: 2rem 0;
   }
 
   .steam-widget {
@@ -463,6 +445,20 @@ a:hover {
     height: 190px;
   }
 
+  .youtube-widget {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .youtube-embed-container iframe {
+    width: 646px;
+    height: 364px;
+  }
+
   .news-grid, .blog-grid {
     grid-template-columns: 1fr;
   }
@@ -473,8 +469,18 @@ a:hover {
     transform: scale(0.7);
     padding: 0 5px;
   }
-  
+
   .steam-widget-section {
+    padding: 1.5rem 0;
+    margin: 0 5px 2rem 5px;
+  }
+
+  .youtube-widget {
+    transform: scale(0.7);
+    padding: 0 5px;
+  }
+
+  .youtube-widget-section {
     padding: 1.5rem 0;
     margin: 0 5px 2rem 5px;
   }
