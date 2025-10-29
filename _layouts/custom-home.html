@@ -145,13 +145,12 @@
   <script>
     // Fetch and display latest YouTube video
     (function() {
-      // You can find your channel ID by going to youtube.com/account_advanced
-      // For custom URLs like /c/MrPhilGames, we need to use the channel handle or ID
-      const channelHandle = 'MrPhilGames';
+      // Channel ID from https://www.youtube.com/channel/UCnQ_zdj5T7Vxz1XMOPS0XQw
+      const channelId = 'UCnQ_zdj5T7Vxz1XMOPS0XQw';
       const youtubeContainer = document.getElementById('youtube-embed-container');
 
       // Using YouTube RSS feed via rss2json proxy
-      const rssUrl = 'https://www.youtube.com/feeds/videos.xml?user=' + channelHandle;
+      const rssUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + channelId;
       const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
 
       fetch(apiUrl)
